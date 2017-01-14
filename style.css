@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+}
+h1{
+    font-family: sans-serif;
+    text-align: center;
+    color: black;
+}
+form{
+    text-align: center;
+}
+
+
+#page{
+    margin: 0 5% 0 5%;
+    box-shadow: 3px 3px 10px grey;
+}
+#banner{
+    position: absolute;
+    max-height: 30%;
+    margin: 0 5% 0 5%;
+    top: 25%;
+    width: 83%;
+    padding: 3%;
+    background-color: white;
+    box-shadow: 8px 8px 15px grey;
+}
+#tkd-symbol{
+    display: block;
+    margin: auto;
+    height: 18%;
+    width: 16%;
+}
+#add img:hover, #edit img:hover, #delete img:hover{
+    border: solid black 1px;
+    box-shadow: 3px 3px 10px grey;
+}
+#add img, #edit img, #delete img{
+    width: 2.25%;
+    height: 2.25%;
+    float: right;
+    padding: 0.5%;
+    margin: 0.5%;
+}
+#link{
+    padding: 1%;
+    vertical-align: text-bottom;
+    width: 98%;
+}
+.error{
+    text-align: center;
+    color: cyan;
+    -webkit-animation: fadein 0.5s;
+    animation: fadein 0.5s;
+}
+.correct{
+    text-align: center;
+    color: magenta;
+    -webkit-animation: fadein 0.5s;
+    animation: fadein 0.5s;
+}
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+
+@keyframes fadein{
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@-webkit-keyframes fadein{
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeout{
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@-webkit-keyframes fadeout{
+    from { opacity: 1; }
+    to { opacity: 0; }
+}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Treasury</title>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div id="page">
+      <div id="delete"><img src="delete.png" alt="delete"/></div>
+      <div id="edit"><img src="edit.png" alt="edit"/></div>
+      <div id="add"><img src="add.png" alt="add"/></div>
+      <h1>Projects</h1>
+      <table></table>
+      <div id="link">
+	<a href="http://www.flaticon.com/free-icon/plus_149145">add button designed by Gregor Cresnar from Flaticon</a>
+        </br>
+	<a href="http://www.flaticon.com/free-icon/edit_159843">edit button designed by Madebyoliver from Flaticon</a>
+        </br>
+	<a href="http://www.flaticon.com/free-icon/dustbin_68606">remove button designed by Puppets from Flaticon</a>
+      </div>
+    </div>
+  </body>
+</html>
