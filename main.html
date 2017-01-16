@@ -3,15 +3,36 @@
   <head>
     <title>Treasury</title>
     <link type="text/css" rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="main-script.js"></script>
   </head>
   <body>
     <div id="page">
-      <div id="delete"><img src="delete.png" alt="delete"/></div>
-      <div id="edit"><img src="edit.png" alt="edit"/></div>
-      <div id="add"><img src="add.png" alt="add"/></div>
-      <h1>Projects</h1>
-      <table></table>
+      <div id="header">
+	<div id="delete"><img src="delete.png" alt="delete"/></div>
+	<div id="edit"><img src="edit.png" alt="edit"/></div>
+	<div id="add">
+	  <label for="files">
+	    <img src="add.png" alt="add"/>
+	  </label>
+	  <form>
+	    <input type="file" id="files" name="file" accept="text/plain"/>
+	  </form>
+	</div>
+	</br>
+	<h1>Projects</h1>
+      </div>
       <div class="line"></div>
+      <div id="body">
+        </br>
+	<table>
+	  <tr>
+	    <th>Event Name</th>
+	    <th>Status</th>
+	  </tr>
+	</table>
+        </br>
+	<div class="line"></div>
+      </div>
       <div id="link">
 	<a href="http://www.flaticon.com/free-icon/plus_149145">add button designed by Gregor Cresnar from Flaticon</a>
         </br>

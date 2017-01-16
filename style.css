@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: #E9E9E9;
 }
 h1{
     font-family: sans-serif;
@@ -9,11 +10,34 @@ h1{
 form{
     text-align: center;
 }
+table{
+    font-family: sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+}
+td, th{
+    border: 1px solid #828081;
+    text-align: left;
+    padding: 5px;
+    margin: 10px;
+}
+input[type=file]{
+    display: none;
+}
+a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 8px;
+    line-height: 0.00000001px;
+}
 
 
 #page{
     margin: 0 5% 0 5%;
+    padding: 2%;
     box-shadow: 3px 3px 10px grey;
+    background-color: #FFFFFF;
 }
 #banner{
     position: absolute;
@@ -31,21 +55,37 @@ form{
     height: 18%;
     width: 16%;
 }
-#add img:hover, #edit img:hover, #delete img:hover{
-    border: solid black 1px;
-    box-shadow: 3px 3px 10px grey;
-}
-#add img, #edit img, #delete img{
-    width: 2.25%;
-    height: 2.25%;
+#add, #edit, #delete{
+    width: 4.25%;
+    height: 4.25%;
     float: right;
-    padding: 0.5%;
-    margin: 0.5%;
+    overflow: hidden;
+}
+#add img:hover, #edit img:hover, #delete img:hover{
+				     box-shadow: 3px 3px 10px grey;
+				     cursor: pointer;
+				 }
+#add img, #edit img, #delete img{
+    width: 60%;
+    height: 60%;
+    float: right;
+    padding: 5%;
+    margin: 20%;
+    border: solid black 1px;
+    background-color: #FFFFFF;
 }
 #link{
     padding: 1%;
     vertical-align: text-bottom;
     width: 98%;
+}
+#header{
+    background-color: #FFFFFF;
+    margin-bottom: 4px;
+    padding-top: 4px;
+}
+#body{
+    background-color: #DFDCE3;
 }
 .error{
     text-align: center;
@@ -63,6 +103,7 @@ form{
     width: 100%;
     height: 1px;
     background-color: black;
+    margin: 0px;
 }
 
 
