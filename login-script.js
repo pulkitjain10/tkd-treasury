@@ -9,7 +9,7 @@ function init(banner){ //opens field for accepting password
     };
 };
 function checkForm(form){ //checks password and changes page accordingly
-    xhr.open("POST", "http://localhost:5000/check", true);
+    xhr.open("POST", "http://tkd-server.herokuapp.com/check", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     pw.password= form.password.value;
     xhr.send(JSON.stringify(pw));
