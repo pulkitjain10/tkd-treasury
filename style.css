@@ -87,6 +87,9 @@ a {
 #body{
     background-color: #DFDCE3;
 }
+#loader{
+    margin: 0 auto;
+}
 .error{
     text-align: center;
     color: cyan;

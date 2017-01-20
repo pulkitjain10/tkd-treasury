@@ -9,31 +9,35 @@ function init(banner){ //opens field for accepting password
     };
 };
 function checkForm(form){ //checks password and changes page accordingly
-    xhr.open("POST", "http://tkd-server.herokuapp.com/check", true);
+    xhr.open("POST", "http://localhost:5000/check", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     pw.password= form.password.value;
     xhr.send(JSON.stringify(pw));
     xhr.onreadystatechange= function(){
-	if(xhr.status === 200 && xhr.readyState === 4){
+	if (xhr.status === 200 && xhr.readyState === 4){
 	    exitPage(banner);
 	}
-	else if(xhr.status === 400){	    
+	else if (xhr.status === 400){	    
 	    banner.innerHTML = html2;
 	    document.getElementById('password').focus();
 	}
+    else if (xhr.readyState != 4){
+        loader.innerHTML = '<h1>"Loading..."</h1>';
+    }
     };
 };
 function exitPage(banner){ //changes page if password was correct
     banner.innerHTML = html3;
     setTimeout(function(){
-	window.location = "/home/tuftscs/Desktop/tkd-treasury/main.html";
+	window.location = "/Users/pulkitjain/Desktop/tkd-treasury/main.html";
     }, 900);
 };
 
 var xhr= new XMLHttpRequest();
-var banner, html1, html2, html3, pw;
+var banner, html1, html2, html3, pw, loader;
 window.onload= function(){
     banner= document.getElementById("banner");
+    loader= document.getElementById("loader");
     
     html1= '<style>h1, form{-webkit-animation: fadein 0.9s;animation: fadein 0.9s;}#banner{-webkit-filter: invert(1);filter: invert(1);transition: max-height 0.105s ease-out; -webkit-transition: max-height 0.105s ease-out; max-height: 50%;}</style><img id="tkd-symbol" src="tkd-symbol.png" alt="tkd-symbol"/><h1>ENTER PASSWORD</h1><form onsubmit="checkForm(this); return false;"><input type="password" autofocus="autofocus" id="password"><input type="submit"></form>';
 
